@@ -16,9 +16,11 @@ import {
   ListItem,
   Right,
   Icon,
-  Spinner
+  Spinner,
+  H1
 } from 'native-base';
 import axios from 'axios';
+import moment from 'moment';
 
 class RecyclingDateModel {
   FoodAndYardWaste: boolean = false;
@@ -57,25 +59,37 @@ export default class App extends Component<Props, AppState> {
 
   showSpinnerIfNeeded() {
     if (this.state.isLoading) {
-      return (<Spinner />);
+      return <Spinner />;
     }
   }
 
   renderIconIfNeeded(d: RecyclingDateModel) {
     if (d.Recycling) {
-      return (<Icon active name='leaf' />);
+      return <Icon active name='leaf' />;
     }
   }
 
-  renderRecycleData() {
-    // console.log(this.recyclingData);
-    // if (this.recyclingData.length > 0) {
-    //   return this.recyclingData.map(data => 
-    //     console.log(data)
-    //     // <Row><Text>Hola</Text></Row>
-    //     // <Row><Text>`${data.date}: Food and yard ${data.foodAndYardWaste} Garbage ${data.garbage} Recycling ${data.recycling}`</Text></Row>
-    //   );
-    // }
+  renderDaysLeft() {
+    if (this.state.recyclingData.length > 0) {
+      let smallestDelta: number = 60;
+      let smallestMoment: moment.Moment = moment();
+      this.state.recyclingData.map(day => {
+        let m = moment(day.start);
+        let days = moment().diff(m, 'days');
+        if (days < smallestDelta) {
+          smallestDelta = days;
+          smallestMoment = m;
+        }
+      });
+
+      const timeUntilRecycle: string = moment(smallestMoment).calendar(null, { sameDay: '[Today]', nextDay: '[Tomorrow]', nextWeek: 'dddd'});
+      console.log(timeUntilRecycle);
+      return (
+        <H1>
+          Recycling comes in {timeUntilRecycle}
+        </H1>
+      );
+    }
   }
 
   render() {
@@ -97,6 +111,8 @@ export default class App extends Component<Props, AppState> {
             <Text>Get Recycling dates</Text>
           </Button>
           {this.showSpinnerIfNeeded()}
+          {this.renderDaysLeft()}
+          <Text>Full Recycling Calendar for the month:</Text>
           {this.state.recyclingData.map(d => (
             <ListItem icon key={d.start}>
               <Text>{d.start}</Text>
@@ -111,21 +127,3 @@ export default class App extends Component<Props, AppState> {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
