@@ -14,6 +14,7 @@ import {
   Input,
   Label,
   ListItem,
+  Left,
   Right,
   Icon,
   Spinner,
@@ -36,7 +37,7 @@ interface AppState {
 
 type Props = {};
 export default class App extends Component<Props, AppState> {
-  seattleRecyclingUri: string = 'https://www.seattle.gov/UTIL/WARP/CollectionCalendar/GetCollectionDays?pAccount=&pAddress=121%20NW%2040TH%20ST&pJustChecking=&pApp=CC&pIE=&start=0';
+  seattleRecyclingUri: string = 'https://www.seattle.gov/UTIL/WARP/CollectionCalendar/GetCollectionDays?pAccount=&pAddress=121%20NW%2040TH%20ST&pJustChecking=&pApp=CC&pIE=&start=';
   
   constructor(props: any) {
     super(props);
@@ -49,7 +50,9 @@ export default class App extends Component<Props, AppState> {
   onButtonPress(): void {
     this.setState({ isLoading: true });
     console.log('Getting data from Seattle Recycling...');
-    axios.get(this.seattleRecyclingUri)
+    const currentUtcDateTimeInSeconds: number = Math.floor((new Date().getTime())/1000);
+    console.log('DateTime: ' + currentUtcDateTimeInSeconds.toString());
+    axios.get(this.seattleRecyclingUri + currentUtcDateTimeInSeconds.toString())
       .then(response => {
         // console.log(response.data);
         this.setState({ recyclingData: response.data, isLoading: false });
@@ -65,7 +68,9 @@ export default class App extends Component<Props, AppState> {
 
   renderIconIfNeeded(d: RecyclingDateModel) {
     if (d.Recycling) {
-      return <Icon active name='leaf' />;
+      return <Icon name='leaf' />;
+    } else {
+      return <Icon name='close' />
     }
   }
 
@@ -75,14 +80,16 @@ export default class App extends Component<Props, AppState> {
       let smallestMoment: moment.Moment = moment();
       this.state.recyclingData.map(day => {
         let m = moment(day.start);
-        let days = moment().diff(m, 'days');
-        if (days < smallestDelta) {
+        let days = m.diff(moment(), 'days');
+        console.log('Evaluating moment: ' + m.toDate());
+        if (day.Recycling && days < smallestDelta) {
+          console.log(`Is Smallest = true. Days = ${days}, smallestDelta = ${smallestDelta}`);
           smallestDelta = days;
           smallestMoment = m;
         }
       });
 
-      const timeUntilRecycle: string = moment(smallestMoment).calendar(null, { sameDay: '[Today]', nextDay: '[Tomorrow]', nextWeek: 'dddd'});
+      const timeUntilRecycle: string = moment(smallestMoment).calendar(undefined, { sameDay: '[Today]', nextDay: '[Tomorrow]', nextWeek: 'dddd', sameElse: 'MMM DD'});
       console.log(timeUntilRecycle);
       return (
         <H1>
@@ -114,7 +121,7 @@ export default class App extends Component<Props, AppState> {
           {this.renderDaysLeft()}
           <Text>Full Recycling Calendar for the month:</Text>
           {this.state.recyclingData.map(d => (
-            <ListItem icon key={d.start}>
+            <ListItem icon key={d.start} >
               <Text>{d.start}</Text>
               <Right>
                   {this.renderIconIfNeeded(d)}
