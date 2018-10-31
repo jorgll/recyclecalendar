@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "global": "^4.3.2",
     "moment": "^2.22.2",
     "native-base": "^2.8.1",
     "react": "16.6.0-alpha.8af6728",
+    "react-devtools": "^3.4.2",
     "react-native": "0.57.4"
   },
   "devDependencies": {
