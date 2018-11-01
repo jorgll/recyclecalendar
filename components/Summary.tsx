@@ -30,7 +30,7 @@ export class Summary extends React.Component<SummaryProps> {
       let smallestDelta: number = 60;
       let smallestMoment: moment.Moment = moment();
       this.props.recyclingData.map(day => {
-        let m = moment(day.start);
+        let m = moment(day.start, "ddd, DD MMM YYYY");
         let days = m.diff(moment(), 'days');
         console.log('Evaluating moment: ' + m.toDate());
         if (day.Recycling && days < smallestDelta) {
@@ -51,8 +51,10 @@ export class Summary extends React.Component<SummaryProps> {
   }
 
   render() {
+    if (this.props.recyclingData.length == 0) return null;
+
     return (
-        <Card transparent>
+        <Card style={{ minHeight: 150, marginLeft: 20, marginRight: 20, marginTop: 20, padding: 10 }}>
             {this.showSpinnerIfNeeded()}
             {this.renderDaysLeft()}
         </Card>
