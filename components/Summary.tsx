@@ -58,7 +58,7 @@ export class Summary extends React.Component<SummaryProps> {
         }
       )
       console.log(timeUntilRecycle)
-      return <H1>Recycling comes in {timeUntilRecycle}</H1>
+      return <H1>Recycling comes: {timeUntilRecycle}</H1>
     }
   }
 
@@ -66,7 +66,7 @@ export class Summary extends React.Component<SummaryProps> {
     if (this.props.recyclingData.length == 0) return null
 
     return (
-      <Card style={styles.card}>
+      <Card style={StyleSheet.flatten(styles.card)}>
         {this.showSpinnerIfNeeded()}
         {this.renderDaysLeft()}
       </Card>

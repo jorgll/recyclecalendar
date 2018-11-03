@@ -16,31 +16,42 @@ export class CollectionCalendarScreen extends React.Component<
   Props,
   CollectionCalendarScreenState
 > {
-  seattleRecyclingUri: string =
-    'https://www.seattle.gov/UTIL/WARP/CollectionCalendar/GetCollectionDays?pAccount=&pAddress=121%20NW%2040TH%20ST&pJustChecking=&pApp=CC&pIE=&start='
+  seattleRecyclingBaseUri: string =
+    'https://www.seattle.gov/UTIL/WARP/CollectionCalendar/GetCollectionDays'
+  seattleRectyclingQueryUri: string =
+    'pAccount=&pAddress={{HOME_ADDRESS}}&pJustChecking=&pApp=CC&pIE=&start={{START_DATE}}'
 
   constructor(props: any) {
     super(props)
+    this.onButtonPress = this.onButtonPress.bind(this)
     this.state = {
       recyclingData: new Array(),
       isLoading: false,
     }
   }
 
-  onButtonPress(): void {
-    this.setState({ isLoading: true })
-    console.log('Getting data from Seattle Recycling...')
+  constructQueryUri(homeAddress: string) {
+    const escapedHomeAddress: string = escape(homeAddress)
     const currentUtcDateTimeInSeconds: number = Math.floor(
       new Date().getTime() / 1000
     )
-    console.log('DateTime: ' + currentUtcDateTimeInSeconds.toString())
-    axios
-      .get(this.seattleRecyclingUri + currentUtcDateTimeInSeconds.toString())
-      .then(response => {
-        console.log(response.data)
-        this.setState({ recyclingData: response.data, isLoading: false })
-        console.log(this.state)
-      })
+    const query = this.seattleRectyclingQueryUri
+      .replace('{{HOME_ADDRESS}}', escapedHomeAddress)
+      .replace('{{START_DATE}}', currentUtcDateTimeInSeconds.toString())
+
+    const uri = `${this.seattleRecyclingBaseUri}?${query}`
+    console.log(uri)
+    return uri
+  }
+
+  onButtonPress(homeAddress: string): void {
+    this.setState({ isLoading: true })
+    console.log('Getting data from Seattle Recycling...')
+    axios.get(this.constructQueryUri(homeAddress)).then(response => {
+      console.log(response.data)
+      this.setState({ recyclingData: response.data, isLoading: false })
+      console.log(this.state)
+    })
   }
 
   renderIconIfNeeded(d: RecyclingDateModel) {
@@ -54,7 +65,7 @@ export class CollectionCalendarScreen extends React.Component<
   render() {
     return (
       <Content>
-        <HomeForm onSubmit={() => this.onButtonPress()} />
+        <HomeForm onSubmit={this.onButtonPress} />
         <Summary
           isLoading={this.state.isLoading}
           recyclingData={this.state.recyclingData}

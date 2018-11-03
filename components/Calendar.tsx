@@ -48,7 +48,7 @@ export class Calendar extends React.Component<CalendarProps> {
     if (this.props.recyclingData.length == 0) return null
 
     return (
-      <Card style={styles.card}>
+      <Card style={StyleSheet.flatten(styles.card)}>
         {this.props.recyclingData.length > 0 &&
           !this.props.hasError && (
             <Text style={styles.headerText}>

@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
 })
 
 interface HomeFormProps {
-  onSubmit: () => void
+  onSubmit: (address: string) => void
 }
 
 interface HomeFormState {
@@ -29,23 +29,31 @@ interface HomeFormState {
 export class HomeForm extends React.Component<HomeFormProps, HomeFormState> {
   constructor(props: any) {
     super(props)
-    this.state = { homeAddress: '121 NW 40th St' }
+    this.state = { homeAddress: '' }
   }
 
-  onButtonPress(): void {
-    this.props.onSubmit()
+  onHomeAddressChangeInternal(text: string): void {
+    console.log(this.state)
+    this.setState({ homeAddress: text })
   }
 
   render() {
     return (
-      <Card style={styles.card}>
-        <Form style={styles.form}>
+      <Card style={StyleSheet.flatten(styles.card)}>
+        <Form style={StyleSheet.flatten(styles.form)}>
           <Item stackedLabel>
             <Label>Home address:</Label>
-            <Input value={this.state.homeAddress} />
+            <Input
+              value={this.state.homeAddress}
+              placeholder={'Enter your home address'}
+              onChangeText={this.onHomeAddressChangeInternal.bind(this)}
+            />
           </Item>
         </Form>
-        <Button onPress={this.props.onSubmit} style={styles.button}>
+        <Button
+          onPress={homeAddress => this.props.onSubmit(this.state.homeAddress)}
+          style={StyleSheet.flatten(styles.button)}
+        >
           <Text>Get Recycling dates</Text>
         </Button>
       </Card>
