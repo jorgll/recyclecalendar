@@ -1,12 +1,12 @@
-import React from 'react';
-import { Container } from 'native-base';
-import { AppHeader } from './components/AppHeader';
-import { CollectionCalendarScreen } from './components/CollectionCalendarScreen';
+import React from 'react'
+import { Container } from 'native-base'
+import { AppHeader } from './components/AppHeader'
+import { CollectionCalendarScreen } from './components/CollectionCalendarScreen'
 
-type Props = {};
+type Props = {}
 export default class App extends React.Component<Props> {
   constructor(props: any) {
-    super(props);
+    super(props)
   }
 
   render() {
@@ -15,7 +15,6 @@ export default class App extends React.Component<Props> {
         <AppHeader title="Seattle Recycling Calendar" />
         <CollectionCalendarScreen />
       </Container>
-    );
+    )
   }
 }
-
