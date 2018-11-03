@@ -3,4 +3,5 @@ export default class RecyclingDateModel {
   Garbage: boolean = false
   Recycling: boolean = false
   start: string = ''
+  status: string = ''
 }

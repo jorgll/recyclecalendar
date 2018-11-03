@@ -45,15 +45,13 @@ export class Calendar extends React.Component<CalendarProps> {
   }
 
   render() {
-    if (this.props.recyclingData.length == 0) return null
+    if (this.props.recyclingData.length == 0 || this.props.hasError) return null
 
     return (
       <Card style={StyleSheet.flatten(styles.card)}>
         {this.props.recyclingData.length > 0 &&
           !this.props.hasError && (
-            <Text style={styles.headerText}>
-              Full Recycling Calendar for the month
-            </Text>
+            <Text style={styles.headerText}>Full Recycling Calendar for the month</Text>
           )}
 
         {this.props.recyclingData.length > 0 &&
