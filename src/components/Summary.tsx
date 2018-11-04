@@ -20,7 +20,7 @@ interface SummaryProps {
   recyclingData: RecyclingDateModel[]
 }
 
-export class Summary extends React.Component<SummaryProps> {
+export default class Summary extends React.Component<SummaryProps> {
   constructor(props: any) {
     super(props)
   }
@@ -38,9 +38,7 @@ export class Summary extends React.Component<SummaryProps> {
       this.props.recyclingData.map(day => {
         let m = moment(day.start, 'ddd, DD MMM YYYY')
         let days = m.diff(moment(), 'days')
-        console.log('Evaluating moment: ' + m.toDate())
         if (day.Recycling && days < smallestDelta) {
-          console.log(`Is Smallest = true. Days = ${days}, smallestDelta = ${smallestDelta}`)
           smallestDelta = days
           smallestMoment = m
         }
@@ -52,7 +50,6 @@ export class Summary extends React.Component<SummaryProps> {
         nextWeek: 'dddd',
         sameElse: 'MMM DD',
       })
-      console.log(timeUntilRecycle)
       return <H1>Recycling comes: {timeUntilRecycle}</H1>
     }
   }

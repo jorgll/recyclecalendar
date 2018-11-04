@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Card, Text, H1 } from 'native-base'
+import { Card, H1 } from 'native-base'
 
 const styles = StyleSheet.create({
   card: {
@@ -16,7 +16,7 @@ interface ErrorCardProps {
   error: string
 }
 
-export class ErrorCard extends React.Component<ErrorCardProps> {
+export default class ErrorCard extends React.Component<ErrorCardProps> {
   constructor(props: any) {
     super(props)
   }

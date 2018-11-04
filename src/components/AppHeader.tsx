@@ -5,7 +5,7 @@ interface AppHeaderProps {
   title: string
 }
 
-export class AppHeader extends React.Component<AppHeaderProps> {
+export default class AppHeader extends React.Component<AppHeaderProps> {
   constructor(props: AppHeaderProps) {
     super(props)
   }

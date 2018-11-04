@@ -31,7 +31,7 @@ interface CalendarProps {
   recyclingData: RecyclingDateModel[]
 }
 
-export class Calendar extends React.Component<CalendarProps> {
+export default class Calendar extends React.Component<CalendarProps> {
   constructor(props: any) {
     super(props)
   }
