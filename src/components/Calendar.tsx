@@ -10,15 +10,19 @@ const styles = StyleSheet.create({
     marginRight: 20,
     marginTop: 20,
     padding: 10,
+    backgroundColor: '#222831',
+    borderColor: '#f5f5f5',
   },
   headerText: {
     paddingBottom: 20,
+    fontSize: 20,
+    color: '#f5f5f5',
   },
   listItemText: {
-    color: 'grey',
+    color: '#f5f5f5',
   },
   recycleIcon: {
-    color: 'green',
+    color: '#005691',
     alignSelf: 'center',
   },
   noRecycleIcon: {
@@ -50,9 +54,7 @@ export default class Calendar extends React.Component<CalendarProps> {
     return (
       <Card style={StyleSheet.flatten(styles.card)}>
         {this.props.recyclingData.length > 0 &&
-          !this.props.hasError && (
-            <Text style={styles.headerText}>Full Recycling Calendar for the month</Text>
-          )}
+          !this.props.hasError && <Text style={styles.headerText}>Monthly calendar</Text>}
 
         {this.props.recyclingData.length > 0 &&
           !this.props.hasError &&

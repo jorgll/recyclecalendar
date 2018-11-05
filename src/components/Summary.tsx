@@ -11,6 +11,11 @@ const styles = StyleSheet.create({
     marginRight: 20,
     marginTop: 20,
     padding: 10,
+    backgroundColor: '#222831',
+    borderColor: '#f5f5f5',
+  },
+  text: {
+    color: '#f5f5f5',
   },
 })
 
@@ -26,7 +31,7 @@ export default class Summary extends React.Component<SummaryProps> {
   }
 
   showSpinnerIfNeeded() {
-    if (this.props.isLoading && !this.props.hasError) {
+    if (this.props.isLoading) {
       return <Spinner />
     }
   }
@@ -50,7 +55,7 @@ export default class Summary extends React.Component<SummaryProps> {
         nextWeek: 'dddd',
         sameElse: 'MMM DD',
       })
-      return <H1>Recycling comes: {timeUntilRecycle}</H1>
+      return <H1 style={StyleSheet.flatten(styles.text)}>Recycling comes: {timeUntilRecycle}</H1>
     }
   }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Keyboard } from 'react-native'
 import { Card, Form, Item, Input, Label, Button, Text } from 'native-base'
 import { connect } from 'react-redux'
 import { bindActionCreators, Dispatch } from 'redux'
@@ -12,12 +12,19 @@ const styles = StyleSheet.create({
     marginRight: 20,
     marginTop: 20,
     padding: 10,
+    backgroundColor: '#222831',
+    borderColor: '#f5f5f5',
   },
   form: {
     paddingBottom: 20,
   },
   button: {
     alignSelf: 'center',
+    backgroundColor: '#005691',
+    color: '#f5f5f5',
+  },
+  label: {
+    color: '#f5f5f5',
   },
 })
 
@@ -47,6 +54,7 @@ class HomeFormBase extends React.Component<HomeFormProps> {
   }
 
   onSubmitButtonPressed(): void {
+    Keyboard.dismiss()
     this.props.fetchRecycleData(this.props.homeAddress)
   }
 
@@ -55,8 +63,9 @@ class HomeFormBase extends React.Component<HomeFormProps> {
       <Card style={StyleSheet.flatten(styles.card)}>
         <Form style={StyleSheet.flatten(styles.form)}>
           <Item stackedLabel>
-            <Label>Home address:</Label>
+            <Label style={StyleSheet.flatten(styles.label)}>Home address:</Label>
             <Input
+              style={StyleSheet.flatten(styles.label)}
               value={this.props.homeAddress}
               placeholder={'Enter your home address'}
               onChangeText={this.onHomeAddressChange.bind(this)}

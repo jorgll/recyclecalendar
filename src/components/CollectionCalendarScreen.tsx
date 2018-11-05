@@ -1,5 +1,6 @@
 import React from 'react'
-import { Content, Text } from 'native-base'
+import { StyleSheet } from 'react-native'
+import { Content } from 'native-base'
 import HomeForm from './HomeForm'
 import Summary from './Summary'
 import Calendar from './Calendar'
@@ -7,6 +8,12 @@ import ErrorCard from './ErrorCard'
 import RecyclingDateModel from '../models/RecyclingDateModel'
 import { connect } from 'react-redux'
 import AppState from '../redux/state'
+
+const styles = StyleSheet.create({
+  page: {
+    backgroundColor: '#222831',
+  },
+})
 
 interface CollectionCalendarScreenProps {
   homeAddress: string
@@ -29,7 +36,7 @@ class CollectionCalendarScreenBase extends React.Component<CollectionCalendarScr
 
   render() {
     return (
-      <Content>
+      <Content style={StyleSheet.flatten(styles.page)}>
         <HomeForm homeAddress={this.props.homeAddress} />
         <ErrorCard error={this.props.error} />
         <Summary

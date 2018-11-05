@@ -9,6 +9,11 @@ const styles = StyleSheet.create({
     marginRight: 20,
     marginTop: 20,
     padding: 10,
+    backgroundColor: '#222831',
+    borderColor: '#f5f5f5',
+  },
+  text: {
+    color: '#f5f5f5',
   },
 })
 
@@ -26,7 +31,7 @@ export default class ErrorCard extends React.Component<ErrorCardProps> {
 
     return (
       <Card style={StyleSheet.flatten(styles.card)}>
-        <H1>⚠️ {this.props.error}</H1>
+        <H1 style={StyleSheet.flatten(styles.text)}>⚠️ {this.props.error}</H1>
       </Card>
     )
   }

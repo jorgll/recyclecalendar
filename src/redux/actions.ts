@@ -21,13 +21,19 @@ export const fetchRecycleData = (address: string) => {
   return (dispatch: Dispatch) => {
     dispatch({ type: FETCH_RECYCLE_DATA, payload: null })
     axios
-      .get(constructQueryUri(address))
+      .get(constructQueryUri(address), { timeout: 5000 })
       .then(response => {
         console.log('HTTP Response: ')
         console.log(response.data)
         if (response.data[0] && response.data[0].status != null) {
           console.log('Recycle data HTTP GET successful but address not found')
-          fetchRecycleDataFail(dispatch, response.data[0].status)
+          fetchRecycleDataFail(dispatch, 'Could not find Seattle homes with this address.')
+        } else if (response.data[0] && response.data[0].end == 'Multiple Premises') {
+          console.log('Multi-tenant building or incomplete home address input')
+          fetchRecycleDataFail(
+            dispatch,
+            'Multiple homes found with this address, please try a more specific search.'
+          )
         } else {
           fetchRecycleDataSuccess(dispatch, response.data)
         }
