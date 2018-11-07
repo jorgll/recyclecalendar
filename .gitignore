@@ -61,8 +61,5 @@ buck-out/
 
 # App Center secrets
 # These are stored locally and on App Center if you sign in
-appcenter-config.json
-AppCenter-Config.plist
-
-# Podfiles
-ios/Pods/
+appcenter-config.RETAIL.json
+AppCenter-Config.RETAIL.plist

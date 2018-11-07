@@ -1,0 +1,783 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		482614B64425273B0F4D2058A0D4437F /* Pods-recyclecalendar-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE1C4DF870BB8EDD5258B481832409 /* Pods-recyclecalendar-tvOS-dummy.m */; };
+		568B5444C8B86D726A6A76C66400AF27 /* Pods-recyclecalendar-tvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C2BB6550F42F00EC6DFFB723B23731 /* Pods-recyclecalendar-tvOSTests-dummy.m */; };
+		62C7E4F4DCDDE08796E82D4ABD391261 /* Pods-recyclecalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 577DDD9F4C4F2396146356F4FDDEFED2 /* Pods-recyclecalendar-dummy.m */; };
+		AB5A15A7EC7C02241C2C3D23CA8549EC /* Pods-recyclecalendarTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A8430BF8BF1A9E39CD30AAD2FB4B27 /* Pods-recyclecalendarTests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01553C6765B093C650A4F407D7C8AC74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F5330864F1EDF4DF98D62A66C1EC474;
+			remoteInfo = "Pods-recyclecalendar";
+		};
+		0993B87B4175F4126D08719F83C3DEDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 361532237B70E6E8E05D53AD9AEE3490;
+			remoteInfo = "Pods-recyclecalendar-tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18EE1C4DF870BB8EDD5258B481832409 /* Pods-recyclecalendar-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-recyclecalendar-tvOS-dummy.m"; sourceTree = "<group>"; };
+		1C8EBF758271698EF8328DEFEB94AF7E /* Pods-recyclecalendar-tvOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-recyclecalendar-tvOSTests-resources.sh"; sourceTree = "<group>"; };
+		1DE1DAA5A0FA6EBE64B6BEC413C9C169 /* Pods-recyclecalendar-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-recyclecalendar-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1FF8CBE3D70C3B5EE02BF7F1402952A2 /* AppCenterCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterCrashes.framework; path = "AppCenter-SDK-Apple/iOS/AppCenterCrashes.framework"; sourceTree = "<group>"; };
+		27C05903D64C58EEB4016FAECBBCFCBE /* Pods-recyclecalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-recyclecalendar.debug.xcconfig"; sourceTree = "<group>"; };
+		2C92B85EBD3E0ECF708DC699748E285A /* Pods-recyclecalendar-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-recyclecalendar-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		2D8747D5C17EA4C991417388EF09E4F3 /* Pods-recyclecalendarTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-recyclecalendarTests-resources.sh"; sourceTree = "<group>"; };
+		2E280B58529AEBA76B5F11C0705D0856 /* AppCenterReactNativeShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterReactNativeShared.framework; path = AppCenterReactNativeShared/AppCenterReactNativeShared.framework; sourceTree = "<group>"; };
+		3492A8D962FABF420F41EFE6BC1380BD /* Pods-recyclecalendarTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-recyclecalendarTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		368AAEA7F4F1C56A5A63B5AC0307C51D /* libPods-recyclecalendar-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-recyclecalendar-tvOSTests.a"; path = "libPods-recyclecalendar-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		388A68B87220F02ABA5D83B5DF0E4A77 /* Pods-recyclecalendar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-recyclecalendar-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3A8418107344A8D96586FE0AD5083753 /* Pods-recyclecalendar-tvOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-recyclecalendar-tvOSTests-frameworks.sh"; sourceTree = "<group>"; };
+		47079FED1F37C00B9A782BD607DB2F32 /* Pods-recyclecalendarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-recyclecalendarTests.release.xcconfig"; sourceTree = "<group>"; };
+		4D4C3F609B01A7C592E3AE1056DE56A7 /* libPods-recyclecalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-recyclecalendar.a"; path = "libPods-recyclecalendar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F964696DE18A5E9CA6BF7CDC176040D /* Pods-recyclecalendar-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-recyclecalendar-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		52C2BB6550F42F00EC6DFFB723B23731 /* Pods-recyclecalendar-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-recyclecalendar-tvOSTests-dummy.m"; sourceTree = "<group>"; };
+		53A8430BF8BF1A9E39CD30AAD2FB4B27 /* Pods-recyclecalendarTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-recyclecalendarTests-dummy.m"; sourceTree = "<group>"; };
+		53AC35BEE496A592E8C0D85BA5D86CB5 /* libPods-recyclecalendar-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-recyclecalendar-tvOS.a"; path = "libPods-recyclecalendar-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C3CCA13659AA84CF85444AD3081363 /* Pods-recyclecalendar-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-recyclecalendar-tvOS-frameworks.sh"; sourceTree = "<group>"; };
+		577DDD9F4C4F2396146356F4FDDEFED2 /* Pods-recyclecalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-recyclecalendar-dummy.m"; sourceTree = "<group>"; };
+		5FB77B82574F2DDBB604F2811183404E /* Pods-recyclecalendar-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-recyclecalendar-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		67DBBCA24308BC82AD299B8CA40015D1 /* Pods-recyclecalendar-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-recyclecalendar-frameworks.sh"; sourceTree = "<group>"; };
+		697057EB6F6A315777E7EA941A2AAF3B /* AppCenterAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterAnalytics.framework; path = "AppCenter-SDK-Apple/iOS/AppCenterAnalytics.framework"; sourceTree = "<group>"; };
+		7997A760C9998445D58030B74CC92F20 /* Pods-recyclecalendar-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-recyclecalendar-tvOS-resources.sh"; sourceTree = "<group>"; };
+		7B037EF0FE1B096837B14ABD7DC01B74 /* Pods-recyclecalendarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-recyclecalendarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		854B788EB9EF0ACBC73EE03D72770DBF /* Pods-recyclecalendarTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-recyclecalendarTests-frameworks.sh"; sourceTree = "<group>"; };
+		885EB5DCB2B5F25ECBEBA73397DD6A43 /* Pods-recyclecalendarTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-recyclecalendarTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB2302346261A28F73034EC061A987E4 /* Pods-recyclecalendar-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-recyclecalendar-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		D4C4D688DB353E85EE718E5E3FEA92A5 /* libPods-recyclecalendarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-recyclecalendarTests.a"; path = "libPods-recyclecalendarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC65AFFB7964130E42157D207BE3A6DE /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenter.framework; path = "AppCenter-SDK-Apple/iOS/AppCenter.framework"; sourceTree = "<group>"; };
+		E3678C30A47529096D377812B06F61B0 /* Pods-recyclecalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-recyclecalendar.release.xcconfig"; sourceTree = "<group>"; };
+		E82F75C496CACBC93EC196A12074F370 /* Pods-recyclecalendar-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-recyclecalendar-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EAC7DC07FAB622F6A6CA5290910DF993 /* Pods-recyclecalendar-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-recyclecalendar-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		F1EDF5F0F1B96DA3399A35A6FB9CFC69 /* Pods-recyclecalendar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-recyclecalendar-acknowledgements.plist"; sourceTree = "<group>"; };
+		F6372AE7048ABE177341148BF04017B8 /* Pods-recyclecalendar-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-recyclecalendar-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		FD3A91F1FC9D037A9E80C9273FA0410C /* Pods-recyclecalendar-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-recyclecalendar-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3798A869E2A56BA0024722A6F2902B21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37ABA04CA86E2BE782294E32C190A54F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A84848CA579A450E23DEF0EAD859046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CE1B2810FDFA8622D649B39812B7A24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C0416FA3744ECAB6C76E95960896084 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC65AFFB7964130E42157D207BE3A6DE /* AppCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2299AF501E253B95F2AE1FAD00A3B182 /* Crashes */ = {
+			isa = PBXGroup;
+			children = (
+				4789B2888C9F3A64D9BB98A64504484B /* Frameworks */,
+			);
+			name = Crashes;
+			sourceTree = "<group>";
+		};
+		260E672E181DB8BDAC7A2999772A7AE4 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				8E2C96EA6162ABA11EBE8E8817909062 /* Frameworks */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		2D20FC01AE47C04E62202F456C8DC21D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0C0416FA3744ECAB6C76E95960896084 /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		4789B2888C9F3A64D9BB98A64504484B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FF8CBE3D70C3B5EE02BF7F1402952A2 /* AppCenterCrashes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65233EA96A4B3BCEE0D84F27CADDEE53 /* Pods-recyclecalendar-tvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				E82F75C496CACBC93EC196A12074F370 /* Pods-recyclecalendar-tvOSTests-acknowledgements.markdown */,
+				F6372AE7048ABE177341148BF04017B8 /* Pods-recyclecalendar-tvOSTests-acknowledgements.plist */,
+				52C2BB6550F42F00EC6DFFB723B23731 /* Pods-recyclecalendar-tvOSTests-dummy.m */,
+				3A8418107344A8D96586FE0AD5083753 /* Pods-recyclecalendar-tvOSTests-frameworks.sh */,
+				1C8EBF758271698EF8328DEFEB94AF7E /* Pods-recyclecalendar-tvOSTests-resources.sh */,
+				1DE1DAA5A0FA6EBE64B6BEC413C9C169 /* Pods-recyclecalendar-tvOSTests.debug.xcconfig */,
+				EAC7DC07FAB622F6A6CA5290910DF993 /* Pods-recyclecalendar-tvOSTests.release.xcconfig */,
+			);
+			name = "Pods-recyclecalendar-tvOSTests";
+			path = "Target Support Files/Pods-recyclecalendar-tvOSTests";
+			sourceTree = "<group>";
+		};
+		72C5026B53025935E000E855466E2CA3 /* Pods-recyclecalendar */ = {
+			isa = PBXGroup;
+			children = (
+				388A68B87220F02ABA5D83B5DF0E4A77 /* Pods-recyclecalendar-acknowledgements.markdown */,
+				F1EDF5F0F1B96DA3399A35A6FB9CFC69 /* Pods-recyclecalendar-acknowledgements.plist */,
+				577DDD9F4C4F2396146356F4FDDEFED2 /* Pods-recyclecalendar-dummy.m */,
+				67DBBCA24308BC82AD299B8CA40015D1 /* Pods-recyclecalendar-frameworks.sh */,
+				FD3A91F1FC9D037A9E80C9273FA0410C /* Pods-recyclecalendar-resources.sh */,
+				27C05903D64C58EEB4016FAECBBCFCBE /* Pods-recyclecalendar.debug.xcconfig */,
+				E3678C30A47529096D377812B06F61B0 /* Pods-recyclecalendar.release.xcconfig */,
+			);
+			name = "Pods-recyclecalendar";
+			path = "Target Support Files/Pods-recyclecalendar";
+			sourceTree = "<group>";
+		};
+		744174104B6042F20A1AB52AE0E3F06F /* Pods-recyclecalendar-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				5FB77B82574F2DDBB604F2811183404E /* Pods-recyclecalendar-tvOS-acknowledgements.markdown */,
+				2C92B85EBD3E0ECF708DC699748E285A /* Pods-recyclecalendar-tvOS-acknowledgements.plist */,
+				18EE1C4DF870BB8EDD5258B481832409 /* Pods-recyclecalendar-tvOS-dummy.m */,
+				55C3CCA13659AA84CF85444AD3081363 /* Pods-recyclecalendar-tvOS-frameworks.sh */,
+				7997A760C9998445D58030B74CC92F20 /* Pods-recyclecalendar-tvOS-resources.sh */,
+				4F964696DE18A5E9CA6BF7CDC176040D /* Pods-recyclecalendar-tvOS.debug.xcconfig */,
+				BB2302346261A28F73034EC061A987E4 /* Pods-recyclecalendar-tvOS.release.xcconfig */,
+			);
+			name = "Pods-recyclecalendar-tvOS";
+			path = "Target Support Files/Pods-recyclecalendar-tvOS";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
+				B1C0FD4C526B54B6F7B5EA76C32A7B4C /* Pods */,
+				E9935E56B8FB5C45CFA189A1387F0F0E /* Products */,
+				DC48319E3492A0D89AF2C54F7F32C189 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8E2C96EA6162ABA11EBE8E8817909062 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				697057EB6F6A315777E7EA941A2AAF3B /* AppCenterAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1C0FD4C526B54B6F7B5EA76C32A7B4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6F4E16E170AFF42D929EF8FFF92078F /* AppCenter */,
+				FDE42022E7C36FE2A980950DD051F732 /* AppCenterReactNativeShared */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9C7DA99F587566ABA0BFEFFF2DF0215 /* Pods-recyclecalendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				3492A8D962FABF420F41EFE6BC1380BD /* Pods-recyclecalendarTests-acknowledgements.markdown */,
+				885EB5DCB2B5F25ECBEBA73397DD6A43 /* Pods-recyclecalendarTests-acknowledgements.plist */,
+				53A8430BF8BF1A9E39CD30AAD2FB4B27 /* Pods-recyclecalendarTests-dummy.m */,
+				854B788EB9EF0ACBC73EE03D72770DBF /* Pods-recyclecalendarTests-frameworks.sh */,
+				2D8747D5C17EA4C991417388EF09E4F3 /* Pods-recyclecalendarTests-resources.sh */,
+				7B037EF0FE1B096837B14ABD7DC01B74 /* Pods-recyclecalendarTests.debug.xcconfig */,
+				47079FED1F37C00B9A782BD607DB2F32 /* Pods-recyclecalendarTests.release.xcconfig */,
+			);
+			name = "Pods-recyclecalendarTests";
+			path = "Target Support Files/Pods-recyclecalendarTests";
+			sourceTree = "<group>";
+		};
+		D6F4E16E170AFF42D929EF8FFF92078F /* AppCenter */ = {
+			isa = PBXGroup;
+			children = (
+				260E672E181DB8BDAC7A2999772A7AE4 /* Analytics */,
+				2D20FC01AE47C04E62202F456C8DC21D /* Core */,
+				2299AF501E253B95F2AE1FAD00A3B182 /* Crashes */,
+			);
+			name = AppCenter;
+			path = AppCenter;
+			sourceTree = "<group>";
+		};
+		DC48319E3492A0D89AF2C54F7F32C189 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				72C5026B53025935E000E855466E2CA3 /* Pods-recyclecalendar */,
+				744174104B6042F20A1AB52AE0E3F06F /* Pods-recyclecalendar-tvOS */,
+				65233EA96A4B3BCEE0D84F27CADDEE53 /* Pods-recyclecalendar-tvOSTests */,
+				C9C7DA99F587566ABA0BFEFFF2DF0215 /* Pods-recyclecalendarTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E9935E56B8FB5C45CFA189A1387F0F0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D4C3F609B01A7C592E3AE1056DE56A7 /* libPods-recyclecalendar.a */,
+				53AC35BEE496A592E8C0D85BA5D86CB5 /* libPods-recyclecalendar-tvOS.a */,
+				368AAEA7F4F1C56A5A63B5AC0307C51D /* libPods-recyclecalendar-tvOSTests.a */,
+				D4C4D688DB353E85EE718E5E3FEA92A5 /* libPods-recyclecalendarTests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F84ACEF4E4D3666C3A595115D01D3868 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E280B58529AEBA76B5F11C0705D0856 /* AppCenterReactNativeShared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDE42022E7C36FE2A980950DD051F732 /* AppCenterReactNativeShared */ = {
+			isa = PBXGroup;
+			children = (
+				F84ACEF4E4D3666C3A595115D01D3868 /* Frameworks */,
+			);
+			name = AppCenterReactNativeShared;
+			path = AppCenterReactNativeShared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		361532237B70E6E8E05D53AD9AEE3490 /* Pods-recyclecalendar-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 852874AF886A6BA5C4A4F6C139BF2334 /* Build configuration list for PBXNativeTarget "Pods-recyclecalendar-tvOS" */;
+			buildPhases = (
+				85F54B046A9538C05E047A789AAF6C5A /* Sources */,
+				3A84848CA579A450E23DEF0EAD859046 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-recyclecalendar-tvOS";
+			productName = "Pods-recyclecalendar-tvOS";
+			productReference = 53AC35BEE496A592E8C0D85BA5D86CB5 /* libPods-recyclecalendar-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		49E9445ABA7D979A82DD3B8042F7C7E5 /* Pods-recyclecalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42ECF74554F0D2226CB96116981F347C /* Build configuration list for PBXNativeTarget "Pods-recyclecalendarTests" */;
+			buildPhases = (
+				6B185390E476DEEACA0A3B9DBC269E73 /* Sources */,
+				37ABA04CA86E2BE782294E32C190A54F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C36C4BC48BCCB2789D5404E64738BA1 /* PBXTargetDependency */,
+			);
+			name = "Pods-recyclecalendarTests";
+			productName = "Pods-recyclecalendarTests";
+			productReference = D4C4D688DB353E85EE718E5E3FEA92A5 /* libPods-recyclecalendarTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5674FA50DD703692342D959938F10779 /* Pods-recyclecalendar-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C75930FD436F179797FA38D32F11D180 /* Build configuration list for PBXNativeTarget "Pods-recyclecalendar-tvOSTests" */;
+			buildPhases = (
+				7EFC5F1321513BD084F2CFACA9617FE9 /* Sources */,
+				5CE1B2810FDFA8622D649B39812B7A24 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7FBC337C3B6D828CBB19FF6DD0701BDA /* PBXTargetDependency */,
+			);
+			name = "Pods-recyclecalendar-tvOSTests";
+			productName = "Pods-recyclecalendar-tvOSTests";
+			productReference = 368AAEA7F4F1C56A5A63B5AC0307C51D /* libPods-recyclecalendar-tvOSTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5F5330864F1EDF4DF98D62A66C1EC474 /* Pods-recyclecalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238AB640FCAA5468E3B5A8D15931A566 /* Build configuration list for PBXNativeTarget "Pods-recyclecalendar" */;
+			buildPhases = (
+				FF790114D90F21EFDD8CB7F689CDB76D /* Sources */,
+				3798A869E2A56BA0024722A6F2902B21 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-recyclecalendar";
+			productName = "Pods-recyclecalendar";
+			productReference = 4D4C3F609B01A7C592E3AE1056DE56A7 /* libPods-recyclecalendar.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = E9935E56B8FB5C45CFA189A1387F0F0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F5330864F1EDF4DF98D62A66C1EC474 /* Pods-recyclecalendar */,
+				361532237B70E6E8E05D53AD9AEE3490 /* Pods-recyclecalendar-tvOS */,
+				5674FA50DD703692342D959938F10779 /* Pods-recyclecalendar-tvOSTests */,
+				49E9445ABA7D979A82DD3B8042F7C7E5 /* Pods-recyclecalendarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B185390E476DEEACA0A3B9DBC269E73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB5A15A7EC7C02241C2C3D23CA8549EC /* Pods-recyclecalendarTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EFC5F1321513BD084F2CFACA9617FE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				568B5444C8B86D726A6A76C66400AF27 /* Pods-recyclecalendar-tvOSTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85F54B046A9538C05E047A789AAF6C5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				482614B64425273B0F4D2058A0D4437F /* Pods-recyclecalendar-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF790114D90F21EFDD8CB7F689CDB76D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62C7E4F4DCDDE08796E82D4ABD391261 /* Pods-recyclecalendar-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C36C4BC48BCCB2789D5404E64738BA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-recyclecalendar";
+			target = 5F5330864F1EDF4DF98D62A66C1EC474 /* Pods-recyclecalendar */;
+			targetProxy = 01553C6765B093C650A4F407D7C8AC74 /* PBXContainerItemProxy */;
+		};
+		7FBC337C3B6D828CBB19FF6DD0701BDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-recyclecalendar-tvOS";
+			target = 361532237B70E6E8E05D53AD9AEE3490 /* Pods-recyclecalendar-tvOS */;
+			targetProxy = 0993B87B4175F4126D08719F83C3DEDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		18D7F970EDE453F63AAECA51B9E3CE4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAC7DC07FAB622F6A6CA5290910DF993 /* Pods-recyclecalendar-tvOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		199D972A13F2B4C56847F7A89CCA83BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		227942F695DB130424E2251B9465A0DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F964696DE18A5E9CA6BF7CDC176040D /* Pods-recyclecalendar-tvOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2934C25FDBCFC2D8A23BC7B17EBCBC1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47079FED1F37C00B9A782BD607DB2F32 /* Pods-recyclecalendarTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E2F70C74361C35B266BF17B94978FFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB2302346261A28F73034EC061A987E4 /* Pods-recyclecalendar-tvOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D8E5CD7EBC913E8774F56DE20E876A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B037EF0FE1B096837B14ABD7DC01B74 /* Pods-recyclecalendarTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86636089D5FBAB02EF751CCBFE696D5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27C05903D64C58EEB4016FAECBBCFCBE /* Pods-recyclecalendar.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A566D1E5A03FA0271CB1573CE082FE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3678C30A47529096D377812B06F61B0 /* Pods-recyclecalendar.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F064545158366915E0B6CBE83675A30A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DE1DAA5A0FA6EBE64B6BEC413C9C169 /* Pods-recyclecalendar-tvOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDB2FC4A1E5891381CD9D922145497F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		238AB640FCAA5468E3B5A8D15931A566 /* Build configuration list for PBXNativeTarget "Pods-recyclecalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86636089D5FBAB02EF751CCBFE696D5D /* Debug */,
+				8A566D1E5A03FA0271CB1573CE082FE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199D972A13F2B4C56847F7A89CCA83BC /* Debug */,
+				FDB2FC4A1E5891381CD9D922145497F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42ECF74554F0D2226CB96116981F347C /* Build configuration list for PBXNativeTarget "Pods-recyclecalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D8E5CD7EBC913E8774F56DE20E876A3 /* Debug */,
+				2934C25FDBCFC2D8A23BC7B17EBCBC1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		852874AF886A6BA5C4A4F6C139BF2334 /* Build configuration list for PBXNativeTarget "Pods-recyclecalendar-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				227942F695DB130424E2251B9465A0DB /* Debug */,
+				2E2F70C74361C35B266BF17B94978FFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C75930FD436F179797FA38D32F11D180 /* Build configuration list for PBXNativeTarget "Pods-recyclecalendar-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F064545158366915E0B6CBE83675A30A /* Debug */,
+				18D7F970EDE453F63AAECA51B9E3CE4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
