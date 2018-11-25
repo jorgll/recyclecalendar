@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Card, H1 } from 'native-base'
+import { Card, H3 } from 'native-base'
 
 const styles = StyleSheet.create({
   card: {
@@ -31,7 +31,7 @@ export default class ErrorCard extends React.Component<ErrorCardProps> {
 
     return (
       <Card style={StyleSheet.flatten(styles.card)}>
-        <H1 style={StyleSheet.flatten(styles.text)}>⚠️ {this.props.error}</H1>
+        <H3 style={StyleSheet.flatten(styles.text)}>{this.props.error}</H3>
       </Card>
     )
   }

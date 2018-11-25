@@ -72,6 +72,8 @@ const seattleRectyclingQueryUri: string =
 
 function constructQueryUri(homeAddress: string) {
   const escapedHomeAddress: string = escape(homeAddress)
+    .toLowerCase()
+    .replace('street', 'st')
   const currentUtcDateTimeInSeconds: number = Math.floor(new Date().getTime() / 1000)
   const query = seattleRectyclingQueryUri
     .replace('{{HOME_ADDRESS}}', escapedHomeAddress)

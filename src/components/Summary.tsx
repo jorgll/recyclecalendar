@@ -6,7 +6,7 @@ import RecyclingDateModel from '../models/RecyclingDateModel'
 
 const styles = StyleSheet.create({
   card: {
-    minHeight: 150,
+    minHeight: 120,
     marginLeft: 20,
     marginRight: 20,
     marginTop: 20,
@@ -53,9 +53,9 @@ export default class Summary extends React.Component<SummaryProps> {
         sameDay: '[Today]',
         nextDay: '[Tomorrow]',
         nextWeek: 'dddd',
-        sameElse: 'MMM DD',
+        sameElse: 'dddd, MMM DD',
       })
-      return <H1 style={StyleSheet.flatten(styles.text)}>Recycling comes: {timeUntilRecycle}</H1>
+      return <H1 style={StyleSheet.flatten(styles.text)}>Next visit: {timeUntilRecycle}</H1>
     }
   }
 
