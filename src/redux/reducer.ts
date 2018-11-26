@@ -5,6 +5,8 @@ import {
   FETCH_RECYCLE_DATA,
   FETCH_RECYCLE_DATA_SUCCESS,
   FETCH_RECYCLE_DATA_FAIL,
+  GET_LOCAL_COORDINATES,
+  GET_LOCAL_COORDINATES_COMPLETED,
 } from './types'
 
 // Reducer
@@ -46,6 +48,20 @@ export default (state: AppState = INITIAL_STATE, action: AnyAction) => {
         error: action.payload,
         recyclingData: [],
       }
+    case GET_LOCAL_COORDINATES: {
+      return {
+        ...state,
+        homeAddress: 'Locating...',
+        error: '',
+      }
+    }
+    case GET_LOCAL_COORDINATES_COMPLETED: {
+      return {
+        ...state,
+        homeAddress: action.payload,
+        error: '',
+      }
+    }
     default:
       return state
   }

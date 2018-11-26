@@ -5,6 +5,8 @@ import {
   FETCH_RECYCLE_DATA,
   FETCH_RECYCLE_DATA_SUCCESS,
   FETCH_RECYCLE_DATA_FAIL,
+  GET_LOCAL_COORDINATES,
+  GET_LOCAL_COORDINATES_COMPLETED,
 } from './types'
 import RecyclingDateModel from '../models/RecyclingDateModel'
 import { SearchAddressResponse, SearchAddressResult } from '../models/AzureMaps'
@@ -28,7 +30,7 @@ export const fetchRecycleData = (address: string) => {
 
     // Try to normalize the address with Azure Maps
     axios
-      .get(constructAzureMapsQueryUri(normalizedAddress), { timeout: 3000 })
+      .get(constructAzureMapsQueryUriForStreetAddress(normalizedAddress), { timeout: 3000 })
       .then(response => {
         console.log('HTTP Response from Azure Maps: ')
         console.log(response.data)
@@ -82,6 +84,37 @@ export const fetchRecycleData = (address: string) => {
   }
 }
 
+export const getLocalAddress = () => {
+  return (dispatch: Dispatch) => {
+    dispatch({ type: GET_LOCAL_COORDINATES, payload: null })
+    navigator.geolocation.getCurrentPosition(position => {
+      axios
+        .get(
+          constructAzureMapsQueryUriForCoordinates(
+            position.coords.latitude,
+            position.coords.longitude
+          ),
+          { timeout: 5000 }
+        )
+        .then(response => {
+          console.log('HTTP Response: ')
+          console.log(response.data)
+          if (response.data.summary.numResults > 0) {
+            console.log(
+              'Current Address: ' + response.data.addresses[0].address.streetNameAndNumber
+            )
+            dispatch({
+              type: GET_LOCAL_COORDINATES_COMPLETED,
+              payload: response.data.addresses[0].address.streetNameAndNumber,
+            })
+          }
+        })
+    }),
+      error => console.log('Could not get GPS coordinates: ' + error.message),
+      { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
+  }
+}
+
 // Action Creator Helpers
 
 const fetchRecycleDataSuccess = (dispatch: Dispatch, data: RecyclingDateModel[]) => {
@@ -101,7 +134,7 @@ const fetchRecycleDataFail = (dispatch: Dispatch, error: string) => {
 // Seattle Recycling Service Call Helpers
 
 const seattleRecyclingBaseUri: string =
-  'https://www.seattle.gov/UTIL/WARP/CollectionCalendar/GetCollectionDays'
+  'https://www.seattle.gov/UTIL/WARP/CollectionCalendar/GetCollectionDays?'
 const seattleRecyclingQueryUri: string =
   'pAccount=&pAddress={{HOME_ADDRESS}}&pJustChecking=&pApp=CC&pIE=&start={{START_DATE}}'
 
@@ -111,23 +144,36 @@ function constructSeattleRecyclingQueryUri(homeAddress: string) {
     .replace('{{HOME_ADDRESS}}', homeAddress)
     .replace('{{START_DATE}}', currentUtcDateTimeInSeconds.toString())
 
-  const uri = `${seattleRecyclingBaseUri}?${query}`
+  const uri = `${seattleRecyclingBaseUri}${query}`
   console.log('HTTP Request: ' + uri)
   return uri
 }
 
 // Azure Maps Service Call Helpers
 
-const azureMapsBaseUri: string = 'https://atlas.microsoft.com/search/address/json'
-const azureMapsQueryUri: string =
-  'api-version=1.0&subscription-key={{API_KEY}}&query={{HOME_ADDRESS}}&countrySet=US'
+const azureMapsBaseUri: string = 'https://atlas.microsoft.com/search/address/'
+const azureMapsQueryUriForStreetAddress: string =
+  'json?api-version=1.0&subscription-key={{API_KEY}}&query={{HOME_ADDRESS}}&countrySet=US'
+const azureMapsQueryUriForCoordinates: string =
+  'reverse/json?api-version=1.0&subscription-key={{API_KEY}}&query={{LATITUDE}},{{LONGITUDE}}'
 
-function constructAzureMapsQueryUri(homeAddress: string) {
-  const query = azureMapsQueryUri
+function constructAzureMapsQueryUriForStreetAddress(homeAddress: string) {
+  const query = azureMapsQueryUriForStreetAddress
     .replace('{{HOME_ADDRESS}}', homeAddress)
     .replace('{{API_KEY}}', AzureMapsApiKey)
 
-  const uri = `${azureMapsBaseUri}?${query}`
+  const uri = `${azureMapsBaseUri}${query}`
+  console.log('HTTP Request: ' + uri)
+  return uri
+}
+
+function constructAzureMapsQueryUriForCoordinates(latitude: number, longitude: number) {
+  const query = azureMapsQueryUriForCoordinates
+    .replace('{{LATITUDE}}', latitude.toString())
+    .replace('{{LONGITUDE}}', longitude.toString())
+    .replace('{{API_KEY}}', AzureMapsApiKey)
+
+  const uri = `${azureMapsBaseUri}${query}`
   console.log('HTTP Request: ' + uri)
   return uri
 }

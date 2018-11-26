@@ -1,9 +1,9 @@
 import React from 'react'
 import { StyleSheet, Keyboard } from 'react-native'
-import { Card, Form, Item, Input, Label, Button, Text } from 'native-base'
+import { Card, Form, Item, Input, Label, Button, Text, Icon } from 'native-base'
 import { connect } from 'react-redux'
 import { bindActionCreators, Dispatch } from 'redux'
-import { addressChanged, fetchRecycleData } from '../redux/actions'
+import { addressChanged, fetchRecycleData, getLocalAddress } from '../redux/actions'
 
 const styles = StyleSheet.create({
   card: {
@@ -32,6 +32,7 @@ interface HomeFormProps {
   homeAddress: string
   addressChanged: (address: string) => void
   fetchRecycleData: (address: string) => void
+  getLocalAddress: () => void
 }
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
@@ -39,6 +40,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
     {
       addressChanged,
       fetchRecycleData,
+      getLocalAddress,
     },
     dispatch
   )
@@ -58,18 +60,29 @@ class HomeFormBase extends React.Component<HomeFormProps> {
     this.props.fetchRecycleData(this.props.homeAddress)
   }
 
+  onGpsButtonPressed(): void {
+    this.props.getLocalAddress()
+  }
+
   render() {
     return (
       <Card style={StyleSheet.flatten(styles.card)}>
         <Form style={StyleSheet.flatten(styles.form)}>
           <Item stackedLabel>
             <Label style={StyleSheet.flatten(styles.label)}>Home address:</Label>
-            <Input
-              style={StyleSheet.flatten(styles.label)}
-              value={this.props.homeAddress}
-              placeholder={'Enter your home address'}
-              onChangeText={this.onHomeAddressChange.bind(this)}
-            />
+            <Item>
+              <Input
+                style={StyleSheet.flatten(styles.label)}
+                value={this.props.homeAddress}
+                placeholder={'Enter your home address'}
+                onChangeText={this.onHomeAddressChange.bind(this)}
+              />
+              <Icon
+                name="navigate"
+                style={StyleSheet.flatten(styles.label)}
+                onPress={this.onGpsButtonPressed.bind(this)}
+              />
+            </Item>
           </Item>
         </Form>
         <Button
