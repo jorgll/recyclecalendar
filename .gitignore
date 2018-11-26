@@ -63,3 +63,7 @@ buck-out/
 # These are stored locally and on App Center if you sign in
 appcenter-config.RETAIL.json
 AppCenter-Config.RETAIL.plist
+
+# App-wide API keys
+# You'll need to recreate a .ts file with these exports to clone this project: AzureMapsApiKey
+src/keys.ts
