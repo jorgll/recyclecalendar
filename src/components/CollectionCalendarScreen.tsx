@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Content } from 'native-base'
+import { Content, Spinner } from 'native-base'
 import HomeForm from './HomeForm'
 import Summary from './Summary'
 import Calendar from './Calendar'
@@ -34,16 +34,19 @@ class CollectionCalendarScreenBase extends React.Component<CollectionCalendarScr
     super(props)
   }
 
+  showSpinnerIfNeeded() {
+    if (this.props.isLoading) {
+      return <Spinner />
+    }
+  }
+
   render() {
     return (
       <Content style={StyleSheet.flatten(styles.page)}>
         <HomeForm homeAddress={this.props.homeAddress} />
         <ErrorCard error={this.props.error} />
-        <Summary
-          isLoading={this.props.isLoading}
-          recyclingData={this.props.recyclingData}
-          hasError={this.props.error != ''}
-        />
+        {this.showSpinnerIfNeeded()}
+        <Summary recyclingData={this.props.recyclingData} hasError={this.props.error != ''} />
         <Calendar recyclingData={this.props.recyclingData} hasError={this.props.error != ''} />
       </Content>
     )

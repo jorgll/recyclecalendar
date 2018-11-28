@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Card, Text, Spinner, H1 } from 'native-base'
+import { Card, H1 } from 'native-base'
 import moment from 'moment'
 import RecyclingDateModel from '../models/RecyclingDateModel'
 
@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
 })
 
 interface SummaryProps {
-  isLoading: boolean
   hasError: boolean
   recyclingData: RecyclingDateModel[]
 }
@@ -28,12 +27,6 @@ interface SummaryProps {
 export default class Summary extends React.Component<SummaryProps> {
   constructor(props: any) {
     super(props)
-  }
-
-  showSpinnerIfNeeded() {
-    if (this.props.isLoading) {
-      return <Spinner />
-    }
   }
 
   renderDaysLeft() {
@@ -62,11 +55,6 @@ export default class Summary extends React.Component<SummaryProps> {
   render() {
     if (this.props.recyclingData.length == 0 || this.props.hasError) return null
 
-    return (
-      <Card style={StyleSheet.flatten(styles.card)}>
-        {this.showSpinnerIfNeeded()}
-        {this.renderDaysLeft()}
-      </Card>
-    )
+    return <Card style={StyleSheet.flatten(styles.card)}>{this.renderDaysLeft()}</Card>
   }
 }

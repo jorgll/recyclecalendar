@@ -35,6 +35,10 @@ interface HomeFormProps {
   getLocalAddress: () => void
 }
 
+interface HomeFormState {
+  isInputFocused: boolean
+}
+
 const mapDispatchToProps = (dispatch: Dispatch) => {
   return bindActionCreators(
     {
@@ -46,9 +50,10 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
   )
 }
 
-class HomeFormBase extends React.Component<HomeFormProps> {
+class HomeFormBase extends React.Component<HomeFormProps, HomeFormState> {
   constructor(props: HomeFormProps) {
     super(props)
+    this.state = { isInputFocused: false }
   }
 
   onHomeAddressChange(text: string): void {
@@ -64,6 +69,18 @@ class HomeFormBase extends React.Component<HomeFormProps> {
     this.props.getLocalAddress()
   }
 
+  onClearButtonPressed(): void {
+    this.onHomeAddressChange('')
+  }
+
+  onInputFocus(): void {
+    this.setState({ isInputFocused: true })
+  }
+
+  onInputBlur(): void {
+    this.setState({ isInputFocused: false })
+  }
+
   render() {
     return (
       <Card style={StyleSheet.flatten(styles.card)}>
@@ -76,7 +93,16 @@ class HomeFormBase extends React.Component<HomeFormProps> {
                 value={this.props.homeAddress}
                 placeholder={'Enter your home address'}
                 onChangeText={this.onHomeAddressChange.bind(this)}
+                onFocus={this.onInputFocus.bind(this)}
+                onBlur={this.onInputBlur.bind(this)}
               />
+              {this.state.isInputFocused && (
+                <Icon
+                  name="close"
+                  style={StyleSheet.flatten(styles.label)}
+                  onPress={this.onClearButtonPressed.bind(this)}
+                />
+              )}
               <Icon
                 name="navigate"
                 style={StyleSheet.flatten(styles.label)}
