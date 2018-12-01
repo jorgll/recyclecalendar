@@ -36,7 +36,7 @@ class CollectionCalendarScreenBase extends React.Component<CollectionCalendarScr
 
   showSpinnerIfNeeded() {
     if (this.props.isLoading) {
-      return <Spinner />
+      return <Spinner color="#f5f5f5" />
     }
   }
 

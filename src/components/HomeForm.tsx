@@ -98,7 +98,7 @@ class HomeFormBase extends React.Component<HomeFormProps, HomeFormState> {
               />
               {this.state.isInputFocused && (
                 <Icon
-                  name="close"
+                  name="close-circle"
                   style={StyleSheet.flatten(styles.label)}
                   onPress={this.onClearButtonPressed.bind(this)}
                 />
