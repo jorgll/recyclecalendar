@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet } from 'react-native'
 import { Card, Text, ListItem, Left, Right, List } from 'native-base'
 import RecyclingDateModel from '../models/RecyclingDateModel'
+import moment from 'moment'
 
 const styles = StyleSheet.create({
   card: {
@@ -52,14 +53,18 @@ export default class Calendar extends React.Component<CalendarProps> {
       <Card style={StyleSheet.flatten(styles.card)}>
         {this.props.recyclingData.length > 0 &&
           !this.props.hasError &&
-          this.props.recyclingData.map(d => (
-            <ListItem key={d.start} noBorder style={StyleSheet.flatten(styles.listItem)}>
-              <Left>
-                <Text style={styles.listItemText}>{d.start}</Text>
-              </Left>
-              <Right>{this.renderIconForItem(d)}</Right>
-            </ListItem>
-          ))}
+          this.props.recyclingData
+            .sort((a, b) => {
+              return moment(a.start, 'ddd, DD MMM YYYY').diff(moment(b.start, 'ddd, DD MMM YYYY'))
+            })
+            .map(d => (
+              <ListItem key={d.start} noBorder style={StyleSheet.flatten(styles.listItem)}>
+                <Left>
+                  <Text style={styles.listItemText}>{d.start}</Text>
+                </Left>
+                <Right>{this.renderIconForItem(d)}</Right>
+              </ListItem>
+            ))}
       </Card>
     )
   }
