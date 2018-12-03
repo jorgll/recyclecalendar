@@ -13,6 +13,8 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
+@import Firebase;
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -45,7 +47,13 @@
   UIView* launchScreenView = [[[NSBundle mainBundle] loadNibNamed:@"LaunchScreen" owner:self options:nil] objectAtIndex:0];
   launchScreenView.frame = self.window.bounds;
   rootView.loadingView = launchScreenView;
+  [FIRApp configure];
   return YES;
+}
+
+- (void) application:(UIApplication *)application didReceiveLocalNotification:(nonnull UILocalNotification *)notification
+{
+  NSLog(@"Received local notification: %@", notification.alertTitle);
 }
 
 @end

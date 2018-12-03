@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#f5f5f5',
+    fontSize: 20,
   },
 })
 

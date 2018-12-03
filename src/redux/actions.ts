@@ -11,6 +11,8 @@ import {
 import RecyclingDateModel from '../models/RecyclingDateModel'
 import { SearchAddressResponse, SearchAddressResult } from '../models/AzureMaps'
 import { AzureMapsApiKey } from '../keys'
+import PushNotification from 'react-native-push-notification'
+import moment from 'moment'
 
 // Action Creators
 
@@ -68,6 +70,11 @@ export const fetchRecycleData = (address: string) => {
                 'Multiple homes found with this address, please try a more specific search.'
               )
             } else {
+              const nextAvailableDate: moment.Moment = getClosestRecycleCollectionMoment(
+                response.data
+              )
+              console.log('Closest recycle collection  moment: ' + nextAvailableDate.toString())
+              scheduleLocalNotification(nextAvailableDate.subtract(4, 'hours').toDate())
               fetchRecycleDataSuccess(dispatch, response.data)
             }
           })
@@ -149,6 +156,24 @@ function constructSeattleRecyclingQueryUri(homeAddress: string) {
   return uri
 }
 
+// Date processing Helpers
+
+function getClosestRecycleCollectionMoment(data: RecyclingDateModel[]): moment.Moment {
+  let smallestMoment: moment.Moment = moment()
+  if (data.length > 0) {
+    let smallestDelta: number = 60
+    data.map(day => {
+      let m = moment(day.start, 'ddd, DD MMM YYYY')
+      let days = m.diff(moment(), 'days')
+      if (day.Recycling && days < smallestDelta) {
+        smallestDelta = days
+        smallestMoment = m
+      }
+    })
+  }
+  return smallestMoment
+}
+
 // Azure Maps Service Call Helpers
 
 const azureMapsBaseUri: string = 'https://atlas.microsoft.com/search/address/'
@@ -176,4 +201,21 @@ function constructAzureMapsQueryUriForCoordinates(latitude: number, longitude: n
   const uri = `${azureMapsBaseUri}${query}`
   console.log('HTTP Request: ' + uri)
   return uri
+}
+
+// Local notification schedule helpers
+
+const TWO_WEEKS: number = 1000 * 60 * 60 * 24 * 14
+function scheduleLocalNotification(date: Date): void {
+  console.log('Scheduling notification for ' + date.toString())
+  PushNotification.localNotificationSchedule({
+    title: 'Seattle recycling',
+    message: 'Recycling comes tomorrow! Remember to take out the recycle bin.',
+    date: date,
+    id: '123',
+    userInfo: { id: '123' },
+    vibrate: true,
+    repeatType: 'time',
+    repeatTime: TWO_WEEKS,
+  })
 }

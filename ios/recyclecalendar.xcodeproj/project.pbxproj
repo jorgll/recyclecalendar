@@ -55,6 +55,8 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		B065F57F52794CBCB7CA3757 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73D4F32674C54E318B60DA5D /* MaterialCommunityIcons.ttf */; };
 		B77BCA336A234C4F87D496AF /* libAppCenterReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FCE18389994238802B2DBB /* libAppCenterReactNative.a */; };
+		D041A70F21B4713700079CDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D041A6E621B4713700079CDF /* GoogleService-Info.plist */; };
+		D09E2A8721B47838006ED052 /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D09E2A6B21B477E3006ED052 /* libRCTPushNotification.a */; };
 		DE44BE9155E947D0861364F8 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2B8536D480947BD9B204092 /* Foundation.ttf */; };
 		E29CDD06285E4B6999D2B47E /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0B365FCCC9F4689A3533556 /* Roboto.ttf */; };
 		E74DFE727C2D4A869E86A5BA /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3887AEB65B66483F81061031 /* MaterialIcons.ttf */; };
@@ -336,6 +338,20 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
+		D09E2A6A21B477E3006ED052 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D09E2A5621B477E3006ED052 /* RCTPushNotification.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTPushNotification;
+		};
+		D09E2A6C21B477E3006ED052 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D09E2A5621B477E3006ED052 /* RCTPushNotification.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D05745F1DE6004600184BB4;
+			remoteInfo = "RCTPushNotification-tvOS";
+		};
 		D0B13F5F2192B66300950897 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E3036075243A4B148B691E7A /* AppCenterReactNative.xcodeproj */;
@@ -416,6 +432,8 @@
 		C2B8536D480947BD9B204092 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		C7E00585606FD51D18C75F38 /* libPods-recyclecalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-recyclecalendar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8044C492DCC156DBAB0E2A2 /* Pods-recyclecalendar-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recyclecalendar-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-recyclecalendar-tvOSTests/Pods-recyclecalendar-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D041A6E621B4713700079CDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "recyclecalendar/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D09E2A5621B477E3006ED052 /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
 		E3036075243A4B148B691E7A /* AppCenterReactNative.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNative.xcodeproj; path = ../node_modules/appcenter/ios/AppCenterReactNative.xcodeproj; sourceTree = "<group>"; };
 		EA0641745D7B481CAD2D5E0A /* libAppCenterReactNativeAnalytics.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNativeAnalytics.a; sourceTree = "<group>"; };
 		F0B365FCCC9F4689A3533556 /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
@@ -435,6 +453,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09E2A8721B47838006ED052 /* libRCTPushNotification.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -568,6 +587,7 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				D041A6E621B4713700079CDF /* GoogleService-Info.plist */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -646,6 +666,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				D09E2A5621B477E3006ED052 /* RCTPushNotification.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -729,6 +750,15 @@
 			children = (
 				ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */,
 				2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D09E2A5721B477E3006ED052 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D09E2A6B21B477E3006ED052 /* libRCTPushNotification.a */,
+				D09E2A6D21B477E3006ED052 /* libRCTPushNotification-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -927,6 +957,10 @@
 				{
 					ProductGroup = 00C302D41ABCB9D200DB3ED1 /* Products */;
 					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+				},
+				{
+					ProductGroup = D09E2A5721B477E3006ED052 /* Products */;
+					ProjectRef = D09E2A5621B477E3006ED052 /* RCTPushNotification.xcodeproj */;
 				},
 				{
 					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
@@ -1219,6 +1253,20 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		D09E2A6B21B477E3006ED052 /* libRCTPushNotification.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTPushNotification.a;
+			remoteRef = D09E2A6A21B477E3006ED052 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D09E2A6D21B477E3006ED052 /* libRCTPushNotification-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTPushNotification-tvOS.a";
+			remoteRef = D09E2A6C21B477E3006ED052 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		D0B13F602192B66300950897 /* libAppCenterReactNative.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1265,6 +1313,7 @@
 				B065F57F52794CBCB7CA3757 /* MaterialCommunityIcons.ttf in Resources */,
 				E74DFE727C2D4A869E86A5BA /* MaterialIcons.ttf in Resources */,
 				7817F834259F41B790F1D5EC /* Octicons.ttf in Resources */,
+				D041A70F21B4713700079CDF /* GoogleService-Info.plist in Resources */,
 				EDE34BAC0D4F4356BA9F6A34 /* Roboto_medium.ttf in Resources */,
 				E29CDD06285E4B6999D2B47E /* Roboto.ttf in Resources */,
 				FFA9F48E0C97448EA5BF9851 /* rubicon-icon-font.ttf in Resources */,

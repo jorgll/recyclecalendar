@@ -8,6 +8,7 @@
     "lint": "tslint 'src/**/*.{ts,tsx}'"
   },
   "dependencies": {
+    "@types/react-native-push-notification": "^3.0.3",
     "@types/react-redux": "^6.0.9",
     "@types/remote-redux-devtools": "^0.5.3",
     "appcenter": "^1.9.0",
@@ -20,6 +21,7 @@
     "react": "16.6.0-alpha.8af6728",
     "react-devtools": "^3.4.2",
     "react-native": "0.57.4",
+    "react-native-push-notification": "^3.1.2",
     "react-redux": "^5.1.0",
     "redux": "^4.0.1",
     "redux-axios-middleware": "^4.0.0",
