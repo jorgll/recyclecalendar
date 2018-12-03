@@ -57,6 +57,7 @@
 		B77BCA336A234C4F87D496AF /* libAppCenterReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FCE18389994238802B2DBB /* libAppCenterReactNative.a */; };
 		D041A70F21B4713700079CDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D041A6E621B4713700079CDF /* GoogleService-Info.plist */; };
 		D09E2A8721B47838006ED052 /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D09E2A6B21B477E3006ED052 /* libRCTPushNotification.a */; };
+		D09E2AC321B4BF81006ED052 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = D09E2A9821B4BF81006ED052 /* AppCenter-Config.plist */; };
 		DE44BE9155E947D0861364F8 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2B8536D480947BD9B204092 /* Foundation.ttf */; };
 		E29CDD06285E4B6999D2B47E /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0B365FCCC9F4689A3533556 /* Roboto.ttf */; };
 		E74DFE727C2D4A869E86A5BA /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3887AEB65B66483F81061031 /* MaterialIcons.ttf */; };
@@ -434,6 +435,7 @@
 		C8044C492DCC156DBAB0E2A2 /* Pods-recyclecalendar-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recyclecalendar-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-recyclecalendar-tvOSTests/Pods-recyclecalendar-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D041A6E621B4713700079CDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "recyclecalendar/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D09E2A5621B477E3006ED052 /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
+		D09E2A9821B4BF81006ED052 /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "recyclecalendar/AppCenter-Config.plist"; sourceTree = "<group>"; };
 		E3036075243A4B148B691E7A /* AppCenterReactNative.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNative.xcodeproj; path = ../node_modules/appcenter/ios/AppCenterReactNative.xcodeproj; sourceTree = "<group>"; };
 		EA0641745D7B481CAD2D5E0A /* libAppCenterReactNativeAnalytics.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNativeAnalytics.a; sourceTree = "<group>"; };
 		F0B365FCCC9F4689A3533556 /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
@@ -588,6 +590,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				D041A6E621B4713700079CDF /* GoogleService-Info.plist */,
+				D09E2A9821B4BF81006ED052 /* AppCenter-Config.plist */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -1308,6 +1311,7 @@
 				AC516F251E7E4E0AAE586263 /* EvilIcons.ttf in Resources */,
 				07AD9A270DCE4FF092506927 /* Feather.ttf in Resources */,
 				6ACD11E13F7E490EA912EEF3 /* FontAwesome.ttf in Resources */,
+				D09E2AC321B4BF81006ED052 /* AppCenter-Config.plist in Resources */,
 				DE44BE9155E947D0861364F8 /* Foundation.ttf in Resources */,
 				2D2369A03F274A2F8E743DD4 /* Ionicons.ttf in Resources */,
 				B065F57F52794CBCB7CA3757 /* MaterialCommunityIcons.ttf in Resources */,

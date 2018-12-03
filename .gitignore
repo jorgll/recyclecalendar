@@ -61,8 +61,14 @@ buck-out/
 
 # App Center secrets
 # These are stored locally and on App Center if you sign in
+# You'll need to manually replace your App Center secret instead of the dummy GUID stored in platform-specific code:
+# 1. Inside of AppCenter-Config.plist (iOS)
+# 2. In appcenter-config.json (Android)
+# The dummy GUID is currently 11111111-1111-1111-1111-111111111111
 appcenter-config.RETAIL.json
 AppCenter-Config.RETAIL.plist
+AppCenter-Config.plist
+appcenter-config.json
 
 # App-wide API keys
 # You'll need to recreate a .ts file with these exports to clone this project: AzureMapsApiKey
