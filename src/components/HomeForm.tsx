@@ -4,6 +4,7 @@ import { Card, Form, Item, Input, Label, Button, Text, Icon } from 'native-base'
 import { connect } from 'react-redux'
 import { bindActionCreators, Dispatch } from 'redux'
 import { addressChanged, fetchRecycleData, getLocalAddress } from '../redux/actions'
+import Analytics from 'appcenter-analytics'
 
 const styles = StyleSheet.create({
   card: {
@@ -62,14 +63,17 @@ class HomeFormBase extends React.Component<HomeFormProps, HomeFormState> {
 
   onSubmitButtonPressed(): void {
     Keyboard.dismiss()
+    Analytics.trackEvent('LookupRecyclingDatesButtonClick')
     this.props.fetchRecycleData(this.props.homeAddress)
   }
 
   onGpsButtonPressed(): void {
+    Analytics.trackEvent('LookupGpsAddressButtonClick')
     this.props.getLocalAddress()
   }
 
   onClearButtonPressed(): void {
+    Analytics.trackEvent('ClearAddressButtonClick')
     this.onHomeAddressChange('')
   }
 

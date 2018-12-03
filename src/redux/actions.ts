@@ -13,6 +13,7 @@ import { SearchAddressResponse, SearchAddressResult } from '../models/AzureMaps'
 import { AzureMapsApiKey } from '../keys'
 import PushNotification from 'react-native-push-notification'
 import moment from 'moment'
+import Analytics from 'appcenter-analytics'
 
 // Action Creators
 
@@ -51,6 +52,7 @@ export const fetchRecycleData = (address: string) => {
               matchingAddresses[0].address.streetName
             }`
             console.log('New best address: ' + normalizedAddress)
+            Analytics.trackEvent('AzureMapsAddressMatch')
           }
         }
 
@@ -62,9 +64,11 @@ export const fetchRecycleData = (address: string) => {
             console.log(response.data)
             if (response.data[0] && response.data[0].status != null) {
               console.log('Recycle data HTTP GET successful but address not found')
+              Analytics.trackEvent('SeattleRecyclingAddressNotFound')
               fetchRecycleDataFail(dispatch, 'Could not find Seattle homes with this address.')
             } else if (response.data[0] && response.data[0].end == 'Multiple Premises') {
               console.log('Multi-tenant building or incomplete home address input')
+              Analytics.trackEvent('SeattleRecyclingMultipleHomesFound')
               fetchRecycleDataFail(
                 dispatch,
                 'Multiple homes found with this address, please try a more specific search.'
@@ -74,11 +78,16 @@ export const fetchRecycleData = (address: string) => {
                 response.data
               )
               console.log('Closest recycle collection  moment: ' + nextAvailableDate.toString())
+
+              // Schedule notification toasts the night before recycling
               scheduleLocalNotification(nextAvailableDate.subtract(4, 'hours').toDate())
+
+              Analytics.trackEvent('SeattleRecyclingHttpSuccess')
               fetchRecycleDataSuccess(dispatch, response.data)
             }
           })
           .catch(e => {
+            Analytics.trackEvent('SeattleRecyclingHttpFail', e.message)
             fetchRecycleDataFail(
               dispatch,
               'Could not get recycling data from Seattle Public Utilities. Try again later.'
@@ -86,6 +95,7 @@ export const fetchRecycleData = (address: string) => {
           })
       })
       .catch(e => {
+        Analytics.trackEvent('AzureMapsHttpFail', e.message)
         fetchRecycleDataFail(dispatch, 'Could not find Seattle homes with this address.')
       })
   }
@@ -117,7 +127,7 @@ export const getLocalAddress = () => {
           }
         })
     }),
-      error => console.log('Could not get GPS coordinates: ' + error.message),
+      error => Analytics.trackEvent('GpsCoordinateReadFail', error.message),
       { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
   }
 }
@@ -209,7 +219,7 @@ const TWO_WEEKS: number = 1000 * 60 * 60 * 24 * 14
 function scheduleLocalNotification(date: Date): void {
   console.log('Scheduling notification for ' + date.toString())
   PushNotification.localNotificationSchedule({
-    title: 'Seattle recycling',
+    title: 'Seattle Recycling Calendar',
     message: 'Recycling comes tomorrow! Remember to take out the recycle bin.',
     date: date,
     id: '123',
