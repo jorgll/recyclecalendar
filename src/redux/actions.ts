@@ -218,6 +218,7 @@ function constructAzureMapsQueryUriForCoordinates(latitude: number, longitude: n
 const TWO_WEEKS: number = 1000 * 60 * 60 * 24 * 14
 function scheduleLocalNotification(date: Date): void {
   console.log('Scheduling notification for ' + date.toString())
+  PushNotification.cancelAllLocalNotifications()
   PushNotification.localNotificationSchedule({
     title: 'Seattle Recycling Calendar',
     message: 'Recycling comes tomorrow! Remember to take out the recycle bin.',
