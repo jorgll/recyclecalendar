@@ -14,7 +14,7 @@
     "appcenter": "^1.9.0",
     "appcenter-analytics": "^1.9.0",
     "appcenter-crashes": "^1.9.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "global": "^4.3.2",
     "moment": "^2.22.2",
     "native-base": "^2.8.1",
